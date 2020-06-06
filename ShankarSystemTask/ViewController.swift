@@ -49,10 +49,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "companylistcell", for: indexPath as IndexPath) as! CompanyListCell
         let data : UserListModel = localStorageInstance.localStoredDataArray[indexPath.row]
         if (data.profileImage != nil) {
-            cell.imageView?.loadImageUsingCache(withUrl: data.profileImage)
+            cell.profileImageView?.loadImageUsingCache(withUrl: data.profileImage)
         }
-        cell.imageView?.clipsToBounds = true
-        cell.imageView?.layer.cornerRadius = 33
+        cell.profileImageView?.clipsToBounds = true
+        cell.profileImageView?.layer.cornerRadius = 33
         cell.nameLabel.text = data.name!
         cell.companyNameLabel.text = (data.companyName != nil) ? data.companyName! : ""
         return cell
