@@ -1,0 +1,6 @@
+framework module Pods_ShankarSystemTask {
+  umbrella header "Pods-ShankarSystemTask-umbrella.h"
+
+  export *
+  module * { export * }
+}
